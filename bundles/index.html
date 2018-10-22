@@ -9,7 +9,7 @@
 <!--<body class="jui">-->
 <body>
 <div id="app">
-    <sheets-table ref="ui" :columns="columns" :rows="rows" :data="data" :width="'800px'" @update="onUpdateEvent" @click="onClickEvent">
+    <sheets-table ref="ui" :columns="columns" :data="data" :width="'800px'" @update="onUpdateEvent" @click="onClickEvent">
         <script slot="row" type="text/template">
             <tr>
                 <td><!= name !></td>

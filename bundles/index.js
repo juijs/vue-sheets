@@ -17,7 +17,6 @@ window.vm = new Vue({
             { key: "age", name: "나이" },
             { key: "location", name: "지역" },
         ],
-        rows: [],
         data: [
             { name: "홍재석", age: "33", location: "대한민국" }
         ]
