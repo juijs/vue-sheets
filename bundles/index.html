@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="charset=utf-8;"/>
+    <!-- TODO: When the page is already loaded with the JUI style -->
+    <!--<link rel="stylesheet" href="jui-ui.classic.css" />-->
+</head>
+<!-- TODO: When the page is already loaded with the JUI style -->
+<!--<body class="jui">-->
+<body>
+<div id="app">
+    <sheets-table ref="ui" :columns="columns" :rows="rows" :data="data" :width="'800px'" @update="onUpdateEvent" @click="onClickEvent">
+        <script slot="row" type="text/template">
+            <tr>
+                <td><!= name !></td>
+                <td><!= age !></td>
+                <td><!= location !></td>
+            </tr>
+        </script>
+    </sheets-table>
+</div>
+</body>
+</html>

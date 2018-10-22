@@ -1,0 +1,13 @@
+<div>
+    <table :class="[ 'table', type, size, effect ]" :style="style">
+        <thead>
+        <tr>
+            <th v-for="(column, index) in columns" :title="names[index]" :width="widths[index]">{{ names[index] }}</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <slot name="row"></slot>
+</div>
