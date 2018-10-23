@@ -1,28 +1,38 @@
 import JUI from 'juijs-grid'
 import Table from 'juijs-grid/src/components/table'
+import XTable from 'juijs-grid/src/components/xtable'
 import props from '../../base/props'
 import computed from '../../base/computed'
 import watch from '../../base/methods'
 import methods from '../../base/methods'
 
-JUI.use(Table);
+JUI.use(Table, XTable);
 
 export default {
-    name: 'sheets-table',
+    name: 'sheets-xtable',
     mixins: [ props, computed, watch, methods ],
+    props: {
+        contentWidth: {
+            type: Number,
+            required: false,
+            default: 0
+        }
+    },
     computed: {
         tableStyle: function() {
             return {
-                width: (typeof(this.tableWidth) == "number") ? this.tableWidth + "px" : this.tableWidth
+                width: (typeof(this.tableWidth) == "string" && this.tableWidth.endsWith("px")) ? parseInt(this.tableWidth) : this.tableWidth
             }
         },
     },
     mounted: function() {
         const self = this;
 
-        this.sheets = JUI.create("grid.table", this.$el, {
+        this.sheets = JUI.create("grid.xtable", this.$el, {
             fields: this.columnKeys,
-            scroll: this.scroll == "scroll",
+            buffer: this.scroll,
+            width: this.contentWidth,
+            scrollWidth: this.tableStyle.width,
             scrollHeight: this.scrollHeight,
             tpl: {
                 row: this.parsingTpl("row")

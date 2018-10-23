@@ -6,8 +6,8 @@ import Vue from 'vue'
 // import SheetsTable from '../src/components/table.classic'
 // Vue.component(SheetsTable.name, SheetsTable);
 
-import SheetsTable from '../src/main'
-Vue.use(SheetsTable, { theme: "classic" });
+import SheetsXTable from '../src/main'
+Vue.use(SheetsXTable, { theme: "classic" });
 
 window.vm = new Vue({
     el: "#app",

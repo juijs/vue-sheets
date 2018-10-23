@@ -9,7 +9,7 @@
 <!--<body class="jui">-->
 <body>
 <div id="app">
-    <sheets-table ref="ui" :columns="columns" :data="data" :width="'800px'" @update="onUpdateEvent" @click="onClickEvent">
+    <sheets-xtable ref="ui" :table-type="'simple headline'" :table-width="800" :columns="columns" :data="data" @update="onUpdateEvent" @click="onClickEvent">
         <script slot="row" type="text/template">
             <tr>
                 <td><!= name !></td>
@@ -17,7 +17,7 @@
                 <td><!= location !></td>
             </tr>
         </script>
-    </sheets-table>
+    </sheets-xtable>
 </div>
 </body>
 </html>

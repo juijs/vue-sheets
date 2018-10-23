@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
+
+    <!-- TODO: When there is no dependency on the JUI style, load the script for that theme -->
+    <script src="../dist/vue-sheets.classic.js"></script>
+    <link rel="stylesheet" href="../dist/vue-sheets.css" />
+
+    <!-- TODO: When the page is already loaded with the JUI style -->
+    <!--<script src="../dist/vue-sheets.base.js"></script>-->
+    <!--<link rel="stylesheet" href="../node_modules/juijs-ui/dist/jui-ui.classic.css" />-->
+</head>
+<!-- TODO: When the page is already loaded with the JUI style -->
+<!--<body class="jui">-->
+<body>
+<div id="app">
+    <sheets-xtable ref="ui" :table-type="'simple headline'" :table-width="800" :columns="columns" :data="data" @update="onUpdateEvent" @click="onClickEvent">
+        <script slot="row" type="text/template">
+            <tr>
+                <td><!= name !></td>
+                <td><!= age !></td>
+                <td><!= location !></td>
+            </tr>
+        </script>
+    </sheets-xtable>
+</div>
+<script>
+    window.vm = new Vue({
+        el: "#app",
+        data: {
+            columns: [
+                { key: "name", name: "이름", width: "200px" },
+                { key: "age", name: "나이" },
+                { key: "location", name: "지역" },
+            ],
+            rows: [],
+            data: [
+                { name: "홍재석", age: "33", location: "대한민국" }
+            ]
+        },
+        methods: {
+            onUpdateEvent: function(rows) {
+                console.log(rows);
+            },
+            onClickEvent: function(row, e) {
+                console.log(row);
+                this.$refs.ui.sheets.select(row.index);
+            }
+        },
+        mounted: function() {
+            console.log(this.$refs.ui.sheets);
+        }
+    });
+</script>
+</body>
+</html>

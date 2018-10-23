@@ -1,5 +1,5 @@
-<div>
-    <table :class="[ 'table', tableType, tableSize, tableEffect ]" :style="tableStyle">
+<div class="xtable">
+    <table :class="[ 'table', tableType, tableSize, tableEffect ]">
         <thead>
             <tr>
                 <th v-for="(column, index) in columns" :title="columnNames[index]" :width="columnWidths[index]">{{ columnNames[index] }}</th>
