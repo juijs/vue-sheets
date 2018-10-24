@@ -15,7 +15,7 @@ export default {
         replaceScopedHash: function(selector) {
             const self = this;
 
-            $(this.sheets.root).find(selector).each(function() {
+            $(this.sheet.root).find(selector).each(function() {
                 $(this).attr(self.$options._scopeId, true)
             });
         },

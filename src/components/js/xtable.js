@@ -123,14 +123,14 @@ export default {
         }
 
         // JUI 테이블 컴포넌트 객체 생성
-        this.sheets = JUI.create('grid.xtable', this.$el, options);
+        this.sheet = JUI.create('grid.xtable', this.$el, options);
 
         // 모든 엘리먼트 스타일 해쉬 적용
         this.replaceScopedHash('.head,.body');
 
         // 기본 데이터 갱신
         if(this.data != null) {
-            this.sheets.update(this.data);
+            this.sheet.update(this.data);
         }
     }
 }

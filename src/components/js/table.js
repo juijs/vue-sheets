@@ -88,11 +88,11 @@ export default {
         };
 
         // JUI 테이블 컴포넌트 객체 생성
-        this.sheets = JUI.create('grid.table', this.$el, options);
+        this.sheet = JUI.create('grid.table', this.$el, options);
 
         // 기본 데이터 갱신
         if(this.data != null) {
-            this.sheets.update(this.data);
+            this.sheet.update(this.data);
         }
     }
 }
