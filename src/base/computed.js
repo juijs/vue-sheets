@@ -8,6 +8,9 @@ export default {
         },
         columnWidths: function() {
             return this.columns.map(column => !column.width ? "auto" : column.width);
+        },
+        columnSorts: function() {
+            return this.columns.map(column => column.sort ? column.key : null).filter(key => key != null);
         }
     }
 }

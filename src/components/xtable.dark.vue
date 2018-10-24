@@ -11,4 +11,8 @@
     @import "~juijs-grid/src/styles/xtable.less";
     @import "~juijs-grid/src/styles/xtable.theme.less";
     @import "~juijs-grid/src/styles/theme/dark.less";
+    @import "~juijs-ui/src/styles/base/mixins.less";
+    @import "~juijs-ui/src/styles/icon.less";
+    @import "~juijs-ui/src/styles/icon.theme.less";
+    @import "~juijs-ui/src/styles/theme/dark.less";
 </style>

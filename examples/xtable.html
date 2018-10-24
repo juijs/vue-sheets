@@ -16,12 +16,28 @@
 <!--<body class="jui">-->
 <body>
 <div id="app">
-    <sheets-xtable ref="ui" :table-type="'simple headline'" :table-width="800" :columns="columns" :data="data" @update="onUpdateEvent" @click="onClickEvent">
+    <sheets-xtable ref="ui"
+                   :table-type="'simple headline'"
+                   :table-width="800"
+                   :columns="columns"
+                   :data="data"
+                   :resize="true"
+                   :sort-type="'multi'"
+                   @update="onUpdateEvent"
+                   @click="onClickEvent">
+
         <script slot="row" type="text/template">
             <tr>
                 <td><!= name !></td>
                 <td><!= age !></td>
                 <td><!= location !></td>
+            </tr>
+        </script>
+        <script slot="none" type="text/template">
+            <tr>
+                <td class="none" colspan="3">
+                    <div class="msg">None!!!</div>
+                </td>
             </tr>
         </script>
     </sheets-xtable>
@@ -32,12 +48,19 @@
         data: {
             columns: [
                 { key: "name", name: "이름", width: "200px" },
-                { key: "age", name: "나이" },
-                { key: "location", name: "지역" },
+                { key: "age", name: "나이", sort: true },
+                { key: "location", name: "지역", sort: true },
             ],
-            rows: [],
             data: [
-                { name: "홍재석", age: "33", location: "대한민국" }
+                { name: "홍재석", age: 31, location: "대한민국" },
+                { name: "홍재석", age: 22, location: "대한민국2" },
+                { name: "홍재석", age: 12, location: "대한민국3" },
+                { name: "홍재석", age: 12, location: "대한민국3" },
+                { name: "홍재석", age: 12, location: "대한민국3" },
+                { name: "홍재석", age: 12, location: "대한민국3" },
+                { name: "홍재석", age: 12, location: "대한민국3" },
+                { name: "홍재석", age: 12, location: "대한민국3" },
+                { name: "홍재석", age: 12, location: "대한민국3" }
             ]
         },
         methods: {

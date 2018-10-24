@@ -32,12 +32,27 @@ export default {
         scroll: {
             type: String,
             required: false,
-            default: 'vscroll', // or page, s-page, scroll
+            default: 'vscroll' // or page, s-page, scroll
         },
         scrollHeight: {
             type: Number,
             required: false,
             default: 200
+        },
+        resize: {
+            type: Boolean,
+            required: false,
+            default: false
+        },
+        sortKey: {
+            type: String,
+            required: false,
+            default: null
+        },
+        sortOrder: {
+            type: String,
+            required: false,
+            default: 'asc' // or desc
         }
     }
 }
