@@ -8,6 +8,7 @@ export default {
             if(tpl != "") {
                 tpl = tpl.split("<tr").join(`<tr ${this.$options._scopeId}`);
                 tpl = tpl.split("<td").join(`<td ${this.$options._scopeId}`);
+                tpl = tpl.split("<i").join(`<i ${this.$options._scopeId}`);
             }
 
             return tpl;
