@@ -18,13 +18,19 @@ window.vm = new Vue({
             { key: "location", name: "지역" },
         ],
         rows: [],
-        data: [
+        datas: [
             { name: "홍재석", age: "33", location: "대한민국" }
-        ]
+        ],
+        template: `<tr>
+            <td><!= name !></td>
+            <td><!= age !></td>
+            <td><i class="icon-help"></i> <!= location !></td>
+        </tr>`
     },
     methods: {
         onUpdateEvent: function(rows) {
             console.log(rows);
+            this.rows = rows;
         },
         onClickEvent: function(row, e) {
             console.log(row);

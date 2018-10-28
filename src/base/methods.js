@@ -2,14 +2,12 @@ import $ from 'jquery'
 
 export default {
     methods: {
-        parsingTpl: function(name) {
-            let tpl = !this.$slots[name] ? "" : this.$slots[name][0].elm.innerHTML;
+        parsingTpl: function(template) {
+            let tpl = !template ? '' : template;
 
-            if(tpl != "") {
-                tpl = tpl.split("<tr").join(`<tr ${this.$options._scopeId}`);
-                tpl = tpl.split("<td").join(`<td ${this.$options._scopeId}`);
-                tpl = tpl.split("<i").join(`<i ${this.$options._scopeId}`);
-            }
+            tpl = tpl.split("<tr").join(`<tr ${this.$options._scopeId}`);
+            tpl = tpl.split("<td").join(`<td ${this.$options._scopeId}`);
+            tpl = tpl.split("<i").join(`<i ${this.$options._scopeId}`);
 
             return tpl;
         },
@@ -23,14 +21,12 @@ export default {
         createTplOptions: function() {
             const tpl = {};
 
-            const tplRow = this.parsingTpl("row");
-            if(tplRow != null) tpl.row = tplRow;
-
-            const tplNone = this.parsingTpl("none");
-            if(tplNone != null) tpl.none = tplNone;
-
-            const tplExpand = this.parsingTpl("expand");
-            if(tplExpand != null) tpl.expand = tplExpand;
+            if(this.templateRow != null)
+                tpl.row = this.parsingTpl(this.templateRow);
+            if(this.templateNone != null)
+                tpl.none = this.parsingTpl(this.templateNone);
+            if(this.templateExpand!= null)
+                tpl.expand = this.parsingTpl(this.templateExpand);
 
             return tpl;
         },

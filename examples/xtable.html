@@ -20,26 +20,13 @@
                    :table-type="'simple headline'"
                    :table-width="800"
                    :columns="columns"
-                   :data="data"
+                   :data="datas"
                    :resize="true"
                    :sort-type="'multi'"
+                   :template-row="tpl_row"
+                   :template-none="tpl_none"
                    @update="onUpdateEvent"
                    @click="onClickEvent">
-
-        <script slot="row" type="text/template">
-            <tr>
-                <td><!= name !></td>
-                <td><!= age !></td>
-                <td><!= location !></td>
-            </tr>
-        </script>
-        <script slot="none" type="text/template">
-            <tr>
-                <td class="none" colspan="3">
-                    <div class="msg">None!!!</div>
-                </td>
-            </tr>
-        </script>
     </sheets-xtable>
 </div>
 <script>
@@ -51,7 +38,7 @@
                 { key: "age", name: "나이", sort: true },
                 { key: "location", name: "지역", sort: true },
             ],
-            data: [
+            datas: [
                 { name: "홍재석", age: 31, location: "대한민국" },
                 { name: "홍재석", age: 22, location: "대한민국2" },
                 { name: "홍재석", age: 12, location: "대한민국3" },
@@ -61,7 +48,17 @@
                 { name: "홍재석", age: 12, location: "대한민국3" },
                 { name: "홍재석", age: 12, location: "대한민국3" },
                 { name: "홍재석", age: 12, location: "대한민국3" }
-            ]
+            ],
+            tpl_row: `<tr>
+                <td><!= name !></td>
+                <td><!= age !></td>
+                <td><!= location !></td>
+            </tr>`,
+            tpl_none: `<tr>
+                <td class="none" colspan="3">
+                    <div class="msg">None!!!</div>
+                </td>
+            </tr>`
         },
         methods: {
             onUpdateEvent: function(rows) {

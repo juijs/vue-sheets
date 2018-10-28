@@ -16,14 +16,14 @@
 <!--<body class="jui">-->
 <body>
 <div id="app">
-    <sheets-table ref="ui" :columns="columns" :rows="rows" :data="data" :width="'800px'" @update="onUpdateEvent" @click="onClickEvent">
-        <script slot="row" type="text/template">
-            <tr>
-                <td><!= name !></td>
-                <td><!= age !></td>
-                <td><!= location !></td>
-            </tr>
-        </script>
+    <sheets-table ref="ui"
+                  :columns="columns"
+                  :rows="rows"
+                  :data="datas"
+                  :width="'800px'"
+                  :template-row="template"
+                  @update="onUpdateEvent"
+                  @click="onClickEvent">
     </sheets-table>
 </div>
 <script>
@@ -35,10 +35,14 @@
                 { key: "age", name: "나이" },
                 { key: "location", name: "지역" },
             ],
-            rows: [],
-            data: [
+            datas: [
                 { name: "홍재석", age: "33", location: "대한민국" }
-            ]
+            ],
+            template: `<tr>
+                <td><!= name !></td>
+                <td><!= age !></td>
+                <td><!= location !></td>
+            </tr>`
         },
         methods: {
             onUpdateEvent: function(rows) {

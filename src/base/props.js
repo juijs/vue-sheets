@@ -53,6 +53,21 @@ export default {
             type: String,
             required: false,
             default: 'asc' // or desc
+        },
+        templateRow: {
+            type: String,
+            required: false,
+            default: null
+        },
+        templateNone: {
+            type: String,
+            required: false,
+            default: null
+        },
+        templateExpand: {
+            type: String,
+            required: false,
+            default: null
         }
     }
 }
