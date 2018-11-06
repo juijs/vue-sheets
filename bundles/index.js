@@ -43,6 +43,6 @@ window.vm = new Vue({
         }
     },
     mounted: function() {
-        console.log(this.$refs.ui.sheets);
+        console.log(this.$refs.ui.sheet);
     }
 });

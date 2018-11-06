@@ -3,11 +3,14 @@ import $ from 'jquery'
 export default {
     methods: {
         parsingTpl: function(template) {
+            const _scopeId = this.$options._scopeId;
             let tpl = !template ? '' : template;
 
-            tpl = tpl.split("<tr").join(`<tr ${this.$options._scopeId}`);
-            tpl = tpl.split("<td").join(`<td ${this.$options._scopeId}`);
-            tpl = tpl.split("<i").join(`<i ${this.$options._scopeId}`);
+            if(typeof(_scopeId) != "undefined") {
+                tpl = tpl.split("<tr").join(`<tr ${_scopeId}`);
+                tpl = tpl.split("<td").join(`<td ${_scopeId}`);
+                tpl = tpl.split("<i").join(`<i ${_scopeId}`);
+            }
 
             return tpl;
         },
