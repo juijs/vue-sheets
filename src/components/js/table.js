@@ -2,7 +2,7 @@ import JUI from 'juijs-grid'
 import TableComp from 'juijs-grid/src/components/table'
 import props from '../../base/props'
 import computed from '../../base/computed'
-import watch from '../../base/methods'
+import watch from '../../base/watch'
 import methods from '../../base/methods'
 
 JUI.use(TableComp);
