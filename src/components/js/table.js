@@ -40,6 +40,7 @@ export default {
             sortOrder: this.sortOrder,
             moveRow: this.dragRow,
             editRow: this.columnEdits.length > 0 ? this.columnEdits : false,
+            tpl: this.createTplOptions(),
             event: {
                 click: function(obj, e) {
                     if(!e) return;
@@ -88,12 +89,6 @@ export default {
 
         // JUI 테이블 컴포넌트 객체 생성
         this.sheet = JUI.create('grid.table', this.$el, options);
-
-        // JUI 테이블 컴포넌트 템플릿 설정
-        const templates = this.createTplOptions();
-        for(let key in templates) {
-            this.sheet.setTpl(key, templates[key]);
-        }
 
         // 기본 데이터 갱신
         if(this.data != null) {

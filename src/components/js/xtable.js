@@ -128,12 +128,6 @@ export default {
         // 모든 엘리먼트 스타일 해쉬 적용
         this.replaceScopedHash('.head,.body');
 
-        // JUI 테이블 컴포넌트 템플릿 설정
-        const templates = this.createTplOptions();
-        for(let key in templates) {
-            this.sheet.setTpl(key, templates[key]);
-        }
-
         // 기본 데이터 갱신
         if(this.data != null) {
             this.sheet.update(this.data);
