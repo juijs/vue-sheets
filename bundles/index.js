@@ -19,13 +19,18 @@ window.vm = new Vue({
         ],
         rows: [],
         datas: [
-            { name: "홍재석", age: "33", location: "대한민국" }
+            // { name: "홍재석", age: "33", location: "대한민국" }
         ],
-        template: `<tr>
+        templateRow: `<tr>
             <td><!= name !></td>
             <td><!= age !></td>
             <td><i class="icon-help"></i> <!= location !></td>
-        </tr>`
+        </tr>`,
+        templateNone: `<tr>
+                    <td class="none" colspan="3">
+                        <div class="msg">No Data</div>
+                    </td>
+                </tr>`
     },
     methods: {
         onUpdateEvent: function(rows) {
