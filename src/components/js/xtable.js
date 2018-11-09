@@ -43,6 +43,14 @@ export default {
             default: 100
         }
     },
+    watch: {
+        scrollHeight: function(newVal, oldVal) {
+            if(newVal == oldVal) return;
+
+            this.sheet.height(newVal);
+            this.sheet.resize();
+        }
+    },
     computed: {
         tableStyle: function() {
             return {

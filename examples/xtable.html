@@ -25,12 +25,13 @@
                    :sort-type="'multi'"
                    :template-row="tpl_row"
                    :template-none="tpl_none"
+                   :scroll-height="table_height"
                    @update="onUpdateEvent"
                    @click="onClickEvent">
     </sheets-xtable>
 </div>
 <script>
-    window.vm = new Vue({
+    var vm = new Vue({
         el: "#app",
         data: {
             columns: [
@@ -49,6 +50,7 @@
                 { name: "홍재석", age: 12, location: "대한민국3" },
                 { name: "홍재석", age: 12, location: "대한민국3" }
             ],
+            table_height: 100,
             tpl_row: `<tr>
                 <td><!= name !></td>
                 <td><!= age !></td>
@@ -73,6 +75,7 @@
             console.log(this.$refs.ui.sheets);
         }
     });
+
 </script>
 </body>
 </html>
