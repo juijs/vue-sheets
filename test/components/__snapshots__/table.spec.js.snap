@@ -1,16 +1,57 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`table.js server render 1`] = `
-<div>
-  <table class="table classic normal hover" style="width:100%;">
+<div
+  style="position: relative;"
+>
+  <table
+    class="table classic normal hover"
+    style="width: 100%;"
+  >
     <thead>
       <tr>
-        <th title="이름" width="200px">이름</th>
-        <th title="나이" width="auto">나이</th>
-        <th title="지역" width="auto">지역</th>
+        <th
+          title="이름"
+          width="200px"
+        >
+          이름
+        </th>
+        <th
+          title="나이"
+          width="auto"
+        >
+          나이
+        </th>
+        <th
+          title="지역"
+          width="auto"
+        >
+          지역
+        </th>
       </tr>
     </thead>
-    <tbody></tbody>
+     
+    <tbody>
+      <tr>
+        
+                
+        <td>
+          홍재석
+        </td>
+        
+                
+        <td>
+          33
+        </td>
+        
+                
+        <td>
+          대한민국
+        </td>
+        
+            
+      </tr>
+    </tbody>
   </table>
 </div>
 `;

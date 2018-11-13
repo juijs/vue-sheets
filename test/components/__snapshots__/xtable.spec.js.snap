@@ -1,0 +1,252 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`xtable.js server render 1`] = `
+<div
+  class="xtable nowrap scroll"
+>
+  <div
+    class="head"
+  >
+    <table
+      class="table classic normal hover"
+      style="position: relative;"
+    >
+      <thead>
+        <tr>
+          <th
+            style="width: 0px;"
+            title="이름"
+            width="200px"
+          >
+            이름
+          </th>
+          <th
+            style="cursor: pointer; width: 0px;"
+            title="나이"
+            width="auto"
+          >
+            나이
+          </th>
+          <th
+            style="cursor: pointer;"
+            title="지역"
+            width="auto"
+          >
+            지역
+          </th>
+        </tr>
+      </thead>
+       
+    </table>
+  </div>
+  <div
+    class="body"
+    style="max-height: 100px; overflow-y: scroll;"
+  >
+    <div
+      style="height: 234px;"
+    >
+      <table
+        class="table classic normal hover"
+        style="position: relative; top: 0px;"
+      >
+        <thead>
+          <tr
+            style="height: 0px;"
+          >
+            <th
+              style="height: 0px; width: 0px;"
+              title="이름"
+              width="200px"
+            />
+            <th
+              style="cursor: pointer; height: 0px; width: 0px;"
+              title="나이"
+              width="auto"
+            />
+            <th
+              style="cursor: pointer; height: 0px; width: auto;"
+              title="지역"
+              width="auto"
+            />
+          </tr>
+        </thead>
+         
+        <tbody>
+          <tr>
+            
+                
+            <td>
+              홍재석
+            </td>
+            
+                
+            <td>
+              31
+            </td>
+            
+                
+            <td>
+              대한민국
+            </td>
+            
+            
+          </tr>
+          <tr>
+            
+                
+            <td>
+              홍재석
+            </td>
+            
+                
+            <td>
+              22
+            </td>
+            
+                
+            <td>
+              대한민국2
+            </td>
+            
+            
+          </tr>
+          <tr>
+            
+                
+            <td>
+              홍재석
+            </td>
+            
+                
+            <td>
+              12
+            </td>
+            
+                
+            <td>
+              대한민국3
+            </td>
+            
+            
+          </tr>
+          <tr>
+            
+                
+            <td>
+              홍재석
+            </td>
+            
+                
+            <td>
+              12
+            </td>
+            
+                
+            <td>
+              대한민국3
+            </td>
+            
+            
+          </tr>
+          <tr>
+            
+                
+            <td>
+              홍재석
+            </td>
+            
+                
+            <td>
+              12
+            </td>
+            
+                
+            <td>
+              대한민국3
+            </td>
+            
+            
+          </tr>
+          <tr>
+            
+                
+            <td>
+              홍재석
+            </td>
+            
+                
+            <td>
+              12
+            </td>
+            
+                
+            <td>
+              대한민국3
+            </td>
+            
+            
+          </tr>
+          <tr>
+            
+                
+            <td>
+              홍재석
+            </td>
+            
+                
+            <td>
+              12
+            </td>
+            
+                
+            <td>
+              대한민국3
+            </td>
+            
+            
+          </tr>
+          <tr>
+            
+                
+            <td>
+              홍재석
+            </td>
+            
+                
+            <td>
+              12
+            </td>
+            
+                
+            <td>
+              대한민국3
+            </td>
+            
+            
+          </tr>
+          <tr>
+            
+                
+            <td>
+              홍재석
+            </td>
+            
+                
+            <td>
+              12
+            </td>
+            
+                
+            <td>
+              대한민국3
+            </td>
+            
+            
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;
