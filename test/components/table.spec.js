@@ -25,8 +25,6 @@ describe('table.js', () => {
     })
 
     it('server render', () => {
-        wrapper.vm.$mount();
-
         wrapper.vm.$nextTick(() => {
             expect(wrapper.vm.$el).toMatchSnapshot();
         });
