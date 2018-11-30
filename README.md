@@ -91,7 +91,7 @@ Vue.component(SheetsTable.name, SheetsTable);
 | sortKey | String | false | false | `null` | Column key to sort by default |
 | sortOrder | String | false | false | `asc` | Sort order type for default sorting (**desc**) |
 | templateRow | String | false | false | `null` | Table row template |
-| templateNone | String | false | false | `null` | If there is no row, the template |
+| templateNone | String | false | false | `null` | If there is no row, displayed template |
 | templateExpand | String | false | false | `null` | Template for table row extension area |
 
 
