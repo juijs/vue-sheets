@@ -85,7 +85,7 @@ Vue.component(SheetsTable.name, SheetsTable);
 | autoFold | Boolean | false | false | false | Hide the content area when you click on the active accordion header again |
 | width | Number, String | false | true | `100%` | The width of the component |
 
-### Events
+## Events
 
 | Name | Arguments | Description |
 | ---- | --------- | ----------- |
