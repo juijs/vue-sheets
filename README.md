@@ -21,8 +21,8 @@ If you are using an existing JUI style, Just download `dist/vue-sheets.base.js` 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
 <script src="dist/vue-sheets.base.js"></script>
-<link rel="stylesheet" href="vue-sheets.classic.css" />
-<!--<link rel="stylesheet" href="vue-sheets.dark.css" />-->
+<link rel="stylesheet" href="jui-grid.classic.css" />
+<!--<link rel="stylesheet" href="jui-grid.dark.css" />-->
 ```
 
 ### Browser
