@@ -102,9 +102,18 @@ Vue.component(SheetsTable.name, SheetsTable);
 | Name | Arguments | Description |
 | ---- | --------- | ----------- |
 | click | Row, Event | Events that occur when a table row is clicked |
-| rowmenu | Row, Event | Events that occur when right-clicking a table row |
+| rclick | Row, Event | Events that occur when right-clicking a table row |
 | dblclick | Row, Event | Events that occur when double-clicking a table row |
 | sort | Row, Event | When sorting starts after clicking on a table column |
 | sortend | Row, Event | When sorting is completed after clicking on a table column |
 | expand | Row, Event | Events that occur when an extension is opened after clicking a table row |
 | expandend | Row, Event | Events that occur when an extension is closed after clicking on a table row |
+
+### Table
+
+| Name | Arguments | Description |
+| ---- | --------- | ----------- |
+| drag | Row, Event | Events that occur when dragging a table row begins |
+| dragend | Row, Event | Events that occur when a table row ends dragging |
+| edit | Row, Event | Events that occur when you modify a table row |
+| editend | Row, Event | Events that occur when the table row is modified |
