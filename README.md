@@ -79,13 +79,16 @@ Vue.component(SheetsTable.name, SheetsTable);
 
 | Name | Type | Required | Watch | Default | Description |
 | ---- | ---- | -------- | ----- | ------- | ----------- |
-| type | String | false | false | `` | Additional styles of accordion (**simple**) |
-| items | Array | true | false | `undefined` | A list of accordion headers |
-| index | Number | false | false | `null` | Sets the accordion header to be activated |
-| autoFold | Boolean | false | false | false | Hide the content area when you click on the active accordion header again |
-| width | Number, String | false | true | `100%` | The width of the component |
+| tableType | String | false | false | `classic` | Table style type (**simple, simple headline, expand**) |
+| tableSize | String | false | false | `normal` | Table size type (**small, large**) |
+| tableEffect | String | false | false | `hover` | Table effect type (**stripeless, borderless**) |
+| tableWidth | Number, String | false | false | `100%` | Table width |
+| columns | Array | true | false | `undefined` | Table columns | Properties of a column object (key, name, width, sort) |
+
 
 ## Events
+
+### Common
 
 | Name | Arguments | Description |
 | ---- | --------- | ----------- |
