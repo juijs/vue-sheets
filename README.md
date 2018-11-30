@@ -21,8 +21,8 @@ If you are using an existing JUI style, Just download `dist/vue-sheets.base.js` 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
 <script src="dist/vue-sheets.base.js"></script>
-<link rel="stylesheet" href="jui-sheets.classic.css" />
-<!--<link rel="stylesheet" href="jui-sheets.dark.css" />-->
+<link rel="stylesheet" href="vue-sheets.classic.css" />
+<!--<link rel="stylesheet" href="vue-sheets.dark.css" />-->
 ```
 
 ### Browser
@@ -66,3 +66,28 @@ import SheetsTable from 'vue-sheets/src/components/table.classic'
 
 Vue.component(SheetsTable.name, SheetsTable);
 ```
+
+## Implemented components
+
+- [Table](https://codepen.io/seogi1004/pen/dgjLRd)
+- [X-Table](https://codepen.io/seogi1004/pen/pQxEvy)
+
+
+## Props
+
+### Common
+
+| Name | Type | Required | Watch | Default | Description |
+| ---- | ---- | -------- | ----- | ------- | ----------- |
+| type | String | false | false | `` | Additional styles of accordion (**simple**) |
+| items | Array | true | false | `undefined` | A list of accordion headers |
+| index | Number | false | false | `null` | Sets the accordion header to be activated |
+| autoFold | Boolean | false | false | false | Hide the content area when you click on the active accordion header again |
+| width | Number, String | false | true | `100%` | The width of the component |
+
+### Events
+
+| Name | Arguments | Description |
+| ---- | --------- | ----------- |
+| open | index | Events that occur when an accordion content is opened |
+| fold | index | Events that occur when an accordion content is closed |
