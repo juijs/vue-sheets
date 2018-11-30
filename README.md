@@ -86,8 +86,13 @@ Vue.component(SheetsTable.name, SheetsTable);
 | columns | Array | true | false | `undefined` | Properties of a column object, Required are key and name (**key, name, width, sort**) |
 | data | Array | false | false | `undefined` | Table row data, The column key must be the same as the row object's key |
 | scroll | String | false | false | `vscroll` | Table scroll type (**page, s-page, scroll**) |
-
-
+| scrollHeight | Number | false | false | 200 | The maximum height of the tbody tag |
+| resize | Boolean | false | false | false | Use resizing of table columns |
+| sortKey | String | false | false | `null` | Column key to sort by default |
+| sortOrder | String | false | false | `asc` | Sort order type for default sorting (**desc**) |
+| templateRow | String | false | false | `null` | Table row template |
+| templateNone | String | false | false | `null` | If there is no row, the template |
+| templateExpand | String | false | false | `null` | Template for table row extension area |
 
 
 ## Events
