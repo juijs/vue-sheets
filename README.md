@@ -101,5 +101,10 @@ Vue.component(SheetsTable.name, SheetsTable);
 
 | Name | Arguments | Description |
 | ---- | --------- | ----------- |
-| open | index | Events that occur when an accordion content is opened |
-| fold | index | Events that occur when an accordion content is closed |
+| click | Row, Event | Events that occur when a table row is clicked |
+| rowmenu | Row, Event | Events that occur when right-clicking a table row |
+| dblclick | Row, Event | Events that occur when double-clicking a table row |
+| sort | Row, Event | When sorting starts after clicking on a table column |
+| sortend | Row, Event | When sorting is completed after clicking on a table column |
+| expand | Row, Event | Events that occur when an extension is opened after clicking a table row |
+| expandend | Row, Event | Events that occur when an extension is closed after clicking on a table row |
