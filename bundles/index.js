@@ -19,7 +19,7 @@ window.vm = new Vue({
         ],
         rows: [],
         datas: [
-            // { name: "홍재석", age: "33", location: "대한민국" }
+            { name: "홍재석", age: "33", location: "대한민국" }
         ],
         templateRow: `<tr>
             <td><!= name !></td>
