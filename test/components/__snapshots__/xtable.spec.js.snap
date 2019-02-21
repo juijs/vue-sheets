@@ -14,13 +14,14 @@ exports[`xtable.js server render 1`] = `
       <thead>
         <tr>
           <th
+            style="width: 0px;"
             title="이름"
             width="200px"
           >
             이름
           </th>
           <th
-            style="cursor: pointer;"
+            style="cursor: pointer; width: 0px;"
             title="나이"
             width="auto"
           >
@@ -54,12 +55,12 @@ exports[`xtable.js server render 1`] = `
             style="height: 0px;"
           >
             <th
-              style="height: 0px;"
+              style="height: 0px; width: 0px;"
               title="이름"
               width="200px"
             />
             <th
-              style="cursor: pointer; height: 0px;"
+              style="cursor: pointer; height: 0px; width: 0px;"
               title="나이"
               width="auto"
             />
