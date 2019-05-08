@@ -41,7 +41,7 @@ exports[`xtable.js server render 1`] = `
   </div>
   <div
     class="body"
-    style="max-height: 100px; overflow-y: scroll;"
+    style="max-height: 100px; overflow-y: scroll; transform: translateZ(0);"
   >
     <div
       style="height: 234px;"
@@ -72,7 +72,9 @@ exports[`xtable.js server render 1`] = `
           </tr>
         </thead>
          
-        <tbody>
+        <tbody
+          style="filter: blur(0px);"
+        >
           <tr
             style=""
           >
