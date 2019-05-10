@@ -72,14 +72,17 @@ export default {
             event: {
                 click: function(obj, e) {
                     if(!e) return;
+                    if(self.selectEffect) this.select(obj.index);
                     self.$emit('click', obj, e);
                 },
                 rowmenu: function(obj, e) {
                     if(!e) return;
+                    if(self.selectEffect) this.select(obj.index);
                     self.$emit('rclick', obj, e);
                 },
                 dblclick: function(obj, e) {
                     if(!e) return;
+
                     self.$emit('dblclick', obj, e);
                 },
                 sort: function(obj, e) {
@@ -110,11 +113,11 @@ export default {
                 },
                 colshow: function(obj, e) {
                     if(!e) return;
-                    self.$emit('columnshow', obj, e);
+                    self.$emit('showcolumn', obj, e);
                 },
                 colhide: function(obj, e) {
                     if(!e) return;
-                    self.$emit('columnhide', obj, e);
+                    self.$emit('hidecolumn', obj, e);
                 },
                 colmenu: function(obj, e) {
                     if(!e) return;

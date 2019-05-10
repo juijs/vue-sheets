@@ -51,7 +51,6 @@ window.vm = new Vue({
         },
         onClickEvent: function(row, e) {
             console.log(row);
-            this.$refs.ui.sheet.select(row.index);
         }
     },
     mounted: function() {

@@ -54,6 +54,11 @@ export default {
             required: false,
             default: 'asc' // or desc
         },
+        selectEffect: {
+            type: Boolean,
+            required: false,
+            default: false
+        },
         activeMenu: {
             type: Boolean,
             required: false,

@@ -93,6 +93,7 @@ Vue.component(SheetsTable.name, SheetsTable);
 | activeMenu | Boolean | false | false | false | Show or hide the drop-down menu for column activation |
 | menuLeft | Number | false | false | 0 | Left coordinate of the drop-down menu |
 | menuTop | Number | false | false | 0 | Top coordinate of the drop-down menu |
+| selectEffect | Boolean | false | false | false | When clicking on a row, apply the selection effect to the row |
 | templateRow | String | false | false | `null` | Table row template |
 | templateNone | String | false | false | `null` | If there are no rows, the displayed template |
 | templateExpand | String | false | false | `null` | Template for table row extension area |
@@ -129,8 +130,8 @@ Vue.component(SheetsTable.name, SheetsTable);
 | sortend | Row, Event | When sorting is completed after clicking on a table column |
 | expand | Row, Event | Events that occur when an extension is opened after clicking a table row |
 | expandend | Row, Event | Events that occur when an extension is closed after clicking on a table row |
-| columnshow | Column, Event | The event that occurs when the column is shown |
-| columnhide | Column, Event | The event that occurs when the column is hidden |
+| showcolumn | Column, Event | The event that occurs when the column is shown |
+| hidecolumn | Column, Event | The event that occurs when the column is hidden |
 | columnmenu | Column, Event | The event that occurs when the drop-down is shown |
 
 ### Table
