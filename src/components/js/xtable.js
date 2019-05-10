@@ -72,12 +72,12 @@ export default {
             event: {
                 click: function(obj, e) {
                     if(!e) return;
-                    if(self.selectEffect) this.select(obj.index);
+                    if(self.selectRowEffect) this.select(obj.index);
                     self.$emit('click', obj, e);
                 },
                 rowmenu: function(obj, e) {
                     if(!e) return;
-                    if(self.selectEffect) this.select(obj.index);
+                    if(self.selectRowEffect) this.select(obj.index);
                     self.$emit('rclick', obj, e);
                 },
                 dblclick: function(obj, e) {
@@ -147,9 +147,15 @@ export default {
         // 모든 엘리먼트 스타일 해쉬 적용
         this.replaceScopedHash('.head,.body');
 
-        // 기본 데이터 갱신
+        // 기본 데이터 및 선택하기
         if(this.data != null) {
             this.sheet.update(this.data);
+
+            let row;
+            if(this.selectRowIndex != -1)
+                row = this.sheet.select(`${this.selectRowIndex}`);
+
+            this.$emit('update', this.sheet.list(), row);
         }
     }
 }

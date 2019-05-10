@@ -93,7 +93,8 @@ Vue.component(SheetsTable.name, SheetsTable);
 | activeMenu | Boolean | false | false | false | Show or hide the drop-down menu for column activation |
 | menuLeft | Number | false | false | 0 | Left coordinate of the drop-down menu |
 | menuTop | Number | false | false | 0 | Top coordinate of the drop-down menu |
-| selectEffect | Boolean | false | false | false | When clicking on a row, apply the selection effect to the row |
+| selectRowEffect | Boolean | false | false | false | When clicking on a row, apply the selection effect to the row |
+| selectRowIndex | Number, String | false | false | false | The index of the row to select when the data is first updated |
 | templateRow | String | false | false | `null` | Table row template |
 | templateNone | String | false | false | `null` | If there are no rows, the displayed template |
 | templateExpand | String | false | false | `null` | Template for table row extension area |

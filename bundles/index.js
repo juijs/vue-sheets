@@ -45,8 +45,8 @@ window.vm = new Vue({
 </div>`
     },
     methods: {
-        onUpdateEvent: function(rows) {
-            console.log(rows);
+        onUpdateEvent: function(rows, selectedRow) {
+            console.log(rows.length, selectedRow);
             this.rows = rows;
         },
         onClickEvent: function(row, e) {
@@ -54,6 +54,6 @@ window.vm = new Vue({
         }
     },
     mounted: function() {
-        console.log(this.$refs.ui.sheet);
+        // console.log(this.$refs.ui.sheet);
     }
 });

@@ -54,10 +54,15 @@ export default {
             required: false,
             default: 'asc' // or desc
         },
-        selectEffect: {
+        selectRowEffect: {
             type: Boolean,
             required: false,
             default: false
+        },
+        selectRowIndex: {
+            type: Number | String,
+            required: false,
+            default: -1
         },
         activeMenu: {
             type: Boolean,
