@@ -83,7 +83,7 @@ Vue.component(SheetsTable.name, SheetsTable);
 | tableSize | String | false | false | `normal` | Table size type (**small, large**) |
 | tableEffect | String | false | false | `hover` | Table effect type (**stripeless, borderless**) |
 | tableWidth | Number, String | false | false | `100%` | Table width |
-| columns | Array | true | false | `undefined` | Properties of a column object, Required are key and name (**key, name, width, sort**) |
+| columns | Array | true | false | `undefined` | Properties of a column object, Required are key and name (**key, name, width, sort, active**) |
 | data | Array | false | true | `undefined` | Table row data, The column key must be the same as the row object's key |
 | scroll | String | false | false | `vscroll` | Table scroll type (**page, s-page, scroll**) |
 | scrollHeight | Number | false | true | 200 | The maximum height of the tbody tag |
