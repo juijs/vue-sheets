@@ -13,8 +13,7 @@ export default {
             return this.columns.map(column => column.sort ? column.key : null).filter(key => key != null);
         },
         columnActives: function() {
-            const actives = this.columns.map(column => column.active ? column.active : null).filter(active => active != null);
-            return actives.length == 0 ? null : actives;
+            return this.columns.map(column => column.active === false ? null : column.key);
         }
     }
 }

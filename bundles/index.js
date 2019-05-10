@@ -14,8 +14,8 @@ window.vm = new Vue({
     data: {
         columns: [
             { key: "name", name: "이름", width: "200px" },
-            { key: "age", name: "나이", edit: true },
-            { key: "location", name: "지역" },
+            { key: "age", name: "나이", edit: true, active: true },
+            { key: "location", name: "지역", active: false },
         ],
         rows: [],
         datas: [
