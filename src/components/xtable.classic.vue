@@ -23,5 +23,7 @@
     @import "~juijs-ui/src/styles/base/mixins.less";
     @import "~juijs-ui/src/styles/icon.less";
     @import "~juijs-ui/src/styles/icon.theme.less";
+    @import "~juijs-ui/src/styles/dropdown.less";
+    @import "~juijs-ui/src/styles/dropdown.theme.less";
     @import "~juijs-ui/src/styles/theme/classic.less";
 </style>

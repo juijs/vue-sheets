@@ -58,6 +58,7 @@ export default {
 
         const options = {
             fields: this.columnKeys,
+            colshow: this.columnActives,
             buffer: this.scroll,
             bufferCount: this.pageCount,
             rowHeight: this.rowHeight,
@@ -106,6 +107,18 @@ export default {
                 msortend: function() {
                     if(!e) return;
                     self.$emit('sortend');
+                },
+                colshow: function(obj, e) {
+                    if(!e) return;
+                    self.$emit('columnshow', obj, e);
+                },
+                colhide: function(obj, e) {
+                    if(!e) return;
+                    self.$emit('columnhide', obj, e);
+                },
+                colmenu: function(obj, e) {
+                    if(!e) return;
+                    self.$emit('columnmenu', obj, e);
                 }
             }
         };

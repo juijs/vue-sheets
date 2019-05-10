@@ -27,6 +27,7 @@ export default {
 
         const options = {
             fields: this.columnKeys,
+            colshow: this.columnActives,
             scroll: this.scroll == 'scroll',
             scrollHeight: this.scrollHeight,
             resize: this.resize,
@@ -78,6 +79,18 @@ export default {
                 editend: function(obj, e) {
                     if(!e) return;
                     self.$emit('editend', obj, e);
+                },
+                colshow: function(obj, e) {
+                    if(!e) return;
+                    self.$emit('columnshow', obj, e);
+                },
+                colhide: function(obj, e) {
+                    if(!e) return;
+                    self.$emit('columnhide', obj, e);
+                },
+                colmenu: function(obj, e) {
+                    if(!e) return;
+                    self.$emit('columnmenu', obj, e);
                 }
             }
         };

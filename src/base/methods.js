@@ -14,6 +14,20 @@ export default {
 
             return tpl;
         },
+        parsingTplForMenu: function(template) {
+            const _scopeId = this.$options._scopeId;
+            let tpl = !template ? '' : template;
+
+            if(typeof(_scopeId) != "undefined") {
+                tpl = tpl.split("<div").join(`<div ${_scopeId}`);
+                tpl = tpl.split("<ul").join(`<ul ${_scopeId}`);
+                tpl = tpl.split("<li").join(`<li ${_scopeId}`);
+                tpl = tpl.split("<a").join(`<a ${_scopeId}`);
+                tpl = tpl.split("<input").join(`<input ${_scopeId}`);
+            }
+
+            return tpl;
+        },
         replaceScopedHash: function(selector) {
             const self = this;
 
@@ -28,8 +42,10 @@ export default {
                 tpl.row = this.parsingTpl(this.templateRow);
             if(this.templateNone != null)
                 tpl.none = this.parsingTpl(this.templateNone);
-            if(this.templateExpand!= null)
+            if(this.templateExpand != null)
                 tpl.expand = this.parsingTpl(this.templateExpand);
+            if(this.templateMenu != null)
+                tpl.menu = this.parsingTplForMenu(this.templateMenu);
 
             return tpl;
         },

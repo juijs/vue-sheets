@@ -54,6 +54,21 @@ export default {
             required: false,
             default: 'asc' // or desc
         },
+        activeMenu: {
+            type: Boolean,
+            required: false,
+            default: false
+        },
+        menuLeft: {
+            type: Number,
+            required: false,
+            default: 0
+        },
+        menuTop: {
+            type: Number,
+            required: false,
+            default: 0
+        },
         templateRow: {
             type: String,
             required: false,
@@ -65,6 +80,11 @@ export default {
             default: null
         },
         templateExpand: {
+            type: String,
+            required: false,
+            default: null
+        },
+        templateMenu: {
             type: String,
             required: false,
             default: null

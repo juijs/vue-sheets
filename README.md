@@ -90,9 +90,13 @@ Vue.component(SheetsTable.name, SheetsTable);
 | resize | Boolean | false | false | false | Use resizing of table columns |
 | sortKey | String | false | false | `null` | Column key to sort by default |
 | sortOrder | String | false | false | `asc` | Sort order type for default sorting (**desc**) |
+| activeMenu | Boolean | false | false | false | Show or hide the drop-down menu for column activation |
+| menuLeft | Number | false | false | 0 | Left coordinate of the drop-down menu |
+| menuTop | Number | false | false | 0 | Top coordinate of the drop-down menu |
 | templateRow | String | false | false | `null` | Table row template |
 | templateNone | String | false | false | `null` | If there are no rows, the displayed template |
 | templateExpand | String | false | false | `null` | Template for table row extension area |
+| templateMenu | String | false | false | `null` | Template for drop-down menu for column activation |
 
 ### Table
 
@@ -125,6 +129,9 @@ Vue.component(SheetsTable.name, SheetsTable);
 | sortend | Row, Event | When sorting is completed after clicking on a table column |
 | expand | Row, Event | Events that occur when an extension is opened after clicking a table row |
 | expandend | Row, Event | Events that occur when an extension is closed after clicking on a table row |
+| columnshow | Column, Event | The event that occurs when the column is shown |
+| columnhide | Column, Event | The event that occurs when the column is hidden |
+| columnmenu | Column, Event | The event that occurs when the drop-down is shown |
 
 ### Table
 

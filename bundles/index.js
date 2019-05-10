@@ -21,6 +21,7 @@ window.vm = new Vue({
         datas: [
             { name: "홍재석", age: "33", location: "대한민국" }
         ],
+        activeMenu: false,
         templateRow: `<tr>
             <td><!= name !></td>
             <td><!= age !></td>
@@ -30,7 +31,18 @@ window.vm = new Vue({
                     <td class="none" colspan="3">
                         <div class="msg">No Data</div>
                     </td>
-                </tr>`
+                </tr>`,
+        templateMenu: `<div class="dropdown">
+    <div class="anchor" style="left: 135px;"></div>
+    
+    <ul style="width: 150px; overflow-y: auto;">
+        <! for(var i = 0; i < columns.length; i++) { !>
+        <li>
+        <a><input type="checkbox" />&nbsp; <!= columns[i] !></a>
+        </li>
+        <! } !>
+    </ul>
+</div>`
     },
     methods: {
         onUpdateEvent: function(rows) {
