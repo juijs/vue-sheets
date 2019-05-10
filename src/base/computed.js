@@ -13,7 +13,13 @@ export default {
             return this.columns.map(column => column.sort ? column.key : null).filter(key => key != null);
         },
         columnActives: function() {
-            return this.columns.map(column => column.active === false ? null : column.key);
+            const indexes = [];
+
+            this.columns.forEach((column, index) => {
+                if(column.active !== false) indexes.push(index);
+            });
+
+            return indexes;
         }
     }
 }

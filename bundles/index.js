@@ -13,6 +13,7 @@ window.vm = new Vue({
     el: "#app",
     data: {
         columns: [
+            { key: null, name: "", width: "30px" },
             { key: "name", name: "이름", width: "200px" },
             { key: "age", name: "나이", edit: true, active: true },
             { key: "location", name: "지역", active: false },
@@ -23,12 +24,13 @@ window.vm = new Vue({
         ],
         activeMenu: false,
         templateRow: `<tr>
+            <td></td>
             <td><!= name !></td>
             <td><!= age !></td>
             <td><i class="icon-help"></i> <!= location !></td>
         </tr>`,
         templateNone: `<tr>
-                    <td class="none" colspan="3">
+                    <td class="none" colspan="4">
                         <div class="msg">No Data</div>
                     </td>
                 </tr>`,
