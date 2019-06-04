@@ -108,7 +108,6 @@ export default {
                     self.$emit('sort', obj, e);
                 },
                 msortend: function() {
-                    if(!e) return;
                     self.$emit('sortend');
                 },
                 colshow: function(obj, e) {
