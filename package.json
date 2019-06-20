@@ -1,6 +1,6 @@
 {
   "name": "vue-sheets",
-  "version": "0.7.3",
+  "version": "0.8.0",
   "description": "Vue components based on the JUI grids available in Vue.js",
   "main": "src/main.js",
   "files": [
@@ -72,7 +72,7 @@
   },
   "dependencies": {
     "jquery": "^3.4.1",
-    "juijs-grid": "^2.3.16",
+    "juijs-grid": "^2.4.0",
     "juijs-ui": "^2.3.2",
     "vue": "^2.6.10"
   }
