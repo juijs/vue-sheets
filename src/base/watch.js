@@ -13,6 +13,16 @@ export default {
 
             if(newVal) this.sheet.showColumnMenu(this.menuLeft, this.menuTop);
             else this.sheet.hideColumnMenu();
+        },
+        templateRow: function(newVal, oldVal) {
+            if(newVal == oldVal) return;
+
+            this.sheet.setTpl("row", newVal);
+        },
+        templateNone: function(newVal, oldVal) {
+            if(newVal == oldVal) return;
+            
+            this.sheet.setTpl("none", newVal);
         }
     }
 }
