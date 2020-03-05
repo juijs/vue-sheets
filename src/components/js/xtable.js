@@ -39,6 +39,12 @@ export default {
         }
     },
     watch: {
+        scrollWidth: function(newVal, oldVal) {
+            if(newVal == oldVal) return;
+
+            this.sheet.scrollWidth(newVal, true);
+            this.sheet.resize();
+        },
         scrollHeight: function(newVal, oldVal) {
             if(newVal == oldVal) return;
 
