@@ -1,6 +1,6 @@
 {
   "name": "vue-sheets",
-  "version": "0.8.1",
+  "version": "1.0.3",
   "description": "Vue components based on the JUI grids available in Vue.js",
   "main": "src/main.js",
   "files": [
@@ -65,15 +65,15 @@
     "vue-template-compiler": "^2.6.10",
     "vue-test-utils": "^1.0.0-beta.11",
     "webpack": "^4.30.0",
-    "webpack-bundle-analyzer": "^2.13.1",
+    "webpack-bundle-analyzer": "^3.3.2",
     "webpack-cli": "^3.3.2",
     "webpack-dev-server": "^3.3.1",
     "webpack-node-externals": "^1.7.2"
   },
   "dependencies": {
     "jquery": "^3.4.1",
-    "juijs-grid": "^2.4.1",
-    "juijs-ui": "^2.3.2",
+    "juijs-grid": "^2.4.5",
+    "juijs-ui": "^2.3.5",
     "vue": "^2.6.10"
   }
 }
