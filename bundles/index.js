@@ -3,7 +3,7 @@
 import Vue from 'vue'
 
 // import SheetsTable from '../src/components/table'
-import SheetsTable from '../src/components/table.classic'
+import SheetsTable from '../src/components/table.dark'
 Vue.component(SheetsTable.name, SheetsTable);
 
 // import SheetsTable from '../src/main'
