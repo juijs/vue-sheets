@@ -3,7 +3,7 @@
 import Vue from 'vue'
 
 // import SheetsTable from '../src/components/table'
-import SheetsTable from '../src/components/table.dark'
+import SheetsTable from '../src/components/xtable.dark'
 Vue.component(SheetsTable.name, SheetsTable);
 
 // import SheetsTable from '../src/main'
@@ -12,6 +12,7 @@ Vue.component(SheetsTable.name, SheetsTable);
 window.vm = new Vue({
     el: "#app",
     data: {
+        activeIndex: 0,
         columns: [
             { key: null, name: "", width: "30px" },
             { key: "name", name: "이름", width: "200px" },
@@ -20,7 +21,9 @@ window.vm = new Vue({
         ],
         rows: [],
         datas: [
-            { name: "홍재석", age: "33", location: "대한민국" }
+            { name: "홍재석", age: "33", location: "대한민국" },
+            { name: "박진호", age: "40", location: "대한민국" },
+            { name: "강대형", age: "33", location: "대한민국" },
         ],
         activeMenu: false,
         templateRow: `<tr>
@@ -48,7 +51,7 @@ window.vm = new Vue({
     },
     methods: {
         onUpdateEvent: function(rows, selectedRow) {
-            console.log(rows.length, selectedRow);
+            // console.log(rows.length, selectedRow);
             this.rows = rows;
         },
         onClickEvent: function(row, e) {

@@ -103,12 +103,7 @@ export default {
         // 기본 데이터 및 선택하기
         if(this.data != null) {
             this.sheet.update(this.data);
-
-            let row;
-            if(this.selectRowIndex != -1)
-                row = this.sheet.select(`${this.selectRowIndex}`);
-
-            this.$emit('update', this.sheet.list(), row);
+            this.$emit('update', this.sheet.list());
         }
     }
 }

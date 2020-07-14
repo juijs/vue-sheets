@@ -9,7 +9,7 @@
 <!--<body class="jui">-->
 <body style='background-color: #1c1c1c;'>
 <div id="app">
-    <sheets-table ref="ui"
+    <sheets-xtable ref="ui"
                   :columns="columns"
                   :rows="rows"
                   :data="datas"
@@ -21,9 +21,10 @@
                   :template-none="templateNone"
                   :template-menu="templateMenu"
                   :select-row-effect="true"
+                  :select-row-index="activeIndex"
                   @update="onUpdateEvent"
                   @click="onClickEvent"
-    ></sheets-table>
+    ></sheets-xtable>
 </div>
 </body>
 </html>
