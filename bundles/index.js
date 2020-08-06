@@ -47,7 +47,8 @@ window.vm = new Vue({
         </li>
         <! } !>
     </ul>
-</div>`
+</div>`,
+        templateExpand: `<div>EXPAND</div>`
     },
     methods: {
         onUpdateEvent: function(rows, selectedRow) {

@@ -36,6 +36,7 @@ export default {
             sortOrder: this.sortOrder,
             moveRow: this.dragRow,
             editRow: this.columnEdits.length > 0 ? this.columnEdits : false,
+            expand: this.templateExpand !== null,
             tpl: this.createTplOptions(),
             event: {
                 click: function(obj, e) {

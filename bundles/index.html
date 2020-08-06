@@ -10,6 +10,7 @@
 <body style='background-color: #1c1c1c;'>
 <div id="app">
     <sheets-xtable ref="ui"
+                    :scroll="'scroll'"
                   :columns="columns"
                   :rows="rows"
                   :data="datas"
@@ -20,6 +21,7 @@
                   :template-row="templateRow"
                   :template-none="templateNone"
                   :template-menu="templateMenu"
+                  :template-expand="templateExpand"
                   :select-row-effect="true"
                   :select-row-index="activeIndex"
                   @update="onUpdateEvent"

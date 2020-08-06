@@ -80,6 +80,7 @@ export default {
             sortOrder: this.sortOrder,
             sortCache: this.sortCache,
             xssFilter: this.xssFilter,
+            expand: this.templateExpand !== null,
             tpl: this.createTplOptions(),
             event: {
                 click: function(obj, e) {
