@@ -12,6 +12,11 @@ export default {
             required: false,
             default: 0
         },
+        scrollEvent: {
+            type: Boolean,
+            required: false,
+            default: true
+        },
         sortType: {
             type: String,
             required: false,
@@ -80,6 +85,7 @@ export default {
             sortOrder: this.sortOrder,
             sortCache: this.sortCache,
             xssFilter: this.xssFilter,
+            vscrollKeydownEvent: this.scrollEvent,
             expand: this.templateExpand !== null,
             tpl: this.createTplOptions(),
             event: {
