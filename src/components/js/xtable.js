@@ -41,7 +41,12 @@ export default {
             type: Number,
             required: false,
             default: 100
-        }
+        },
+        scrollRowIndex: {
+            type: Number | String,
+            required: false,
+            default: -1
+        },
     },
     watch: {
         tableWidth: function(newVal, oldVal) {
@@ -62,11 +67,10 @@ export default {
             this.sheet.height(newVal);
             this.sheet.resize();
         },
-        selectRowIndex: function(newVal, oldVal) {
+        scrollRowIndex: function(newVal, oldVal) {
             if(newVal == oldVal) return;
 
             this.sheet.scrollTop(newVal);
-            this.sheet.select(newVal);
         },
     },
     computed: {

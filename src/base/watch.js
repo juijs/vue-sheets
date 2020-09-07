@@ -23,6 +23,11 @@ export default {
             if(newVal == oldVal) return;
             
             this.sheet.setTpl("none", newVal);
-        }
+        },
+        selectRowIndex: function(newVal, oldVal) {
+            if(newVal == oldVal) return;
+
+            this.sheet.select(newVal);
+        },
     }
 }
