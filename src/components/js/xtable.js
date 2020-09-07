@@ -61,7 +61,13 @@ export default {
 
             this.sheet.height(newVal);
             this.sheet.resize();
-        }
+        },
+        selectRowIndex: function(newVal, oldVal) {
+            if(newVal == oldVal) return;
+
+            this.sheet.scrollTop(newVal);
+            this.sheet.select(newVal);
+        },
     },
     computed: {
         tableStyle: function() {

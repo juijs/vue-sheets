@@ -12,6 +12,13 @@ export default {
             default: false
         }
     },
+    watch: {
+        selectRowIndex: function(newVal, oldVal) {
+            if(newVal === oldVal) return;
+
+            this.sheet.select(newVal);
+        },
+    },
     computed: {
         tableStyle: function() {
             return {

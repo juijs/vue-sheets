@@ -3,11 +3,11 @@
 import Vue from 'vue'
 
 // import SheetsTable from '../src/components/table'
-import SheetsTable from '../src/components/xtable.dark'
-Vue.component(SheetsTable.name, SheetsTable);
+// import SheetsTable from '../src/components/xtable.dark'
+// Vue.component(SheetsTable.name, SheetsTable);
 
-// import SheetsTable from '../src/main'
-// Vue.use(SheetsTable, { theme: "classic" });
+import SheetsTable from '../src/main'
+Vue.use(SheetsTable, { theme: "dark" });
 
 window.vm = new Vue({
     el: "#app",
