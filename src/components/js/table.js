@@ -56,7 +56,7 @@ export default {
                 sort: function(obj, e) {
                     if(!e) return;
                     self.setSortEffect(obj);
-                    self.$emit('sort', obj, e);
+                    self.$emit('sort', { column: obj, data: this.listData() }, e);
                 },
                 expand: function(obj, e) {
                     if(!e) return;

@@ -129,7 +129,7 @@ export default {
                 },
                 sortend: function(obj, e) {
                     if(!e) return;
-                    self.$emit('sortend', obj, e);
+                    self.$emit('sortend', { column: obj, data: this.listData() }, e);
                 },
                 msort: function(obj, e) {
                     if(!e) return;
@@ -137,7 +137,7 @@ export default {
                     self.$emit('sort', obj, e);
                 },
                 msortend: function() {
-                    self.$emit('sortend');
+                    self.$emit('sortend', { column: null, data: this.listData() });
                 },
                 colshow: function(obj, e) {
                     if(!e) return;
