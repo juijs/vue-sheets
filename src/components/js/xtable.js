@@ -129,7 +129,7 @@ export default {
                 },
                 sortend: function(obj, e) {
                     if(!e) return;
-                    self.$emit('sortend', { column: obj, data: this.listData() }, e);
+                    self.$emit('sortend', { column: obj, rows: this.list() }, e);
                 },
                 msort: function(obj, e) {
                     if(!e) return;
@@ -137,7 +137,7 @@ export default {
                     self.$emit('sort', obj, e);
                 },
                 msortend: function() {
-                    self.$emit('sortend', { column: null, data: this.listData() });
+                    self.$emit('sortend', { column: null, rows: this.list() });
                 },
                 colshow: function(obj, e) {
                     if(!e) return;
@@ -150,6 +150,12 @@ export default {
                 colmenu: function(obj, e) {
                     if(!e) return;
                     self.$emit('columnmenu', obj, e);
+                },
+                update: function() {
+                    self.$emit('update', this.list());
+                },
+                updateTree: function() {
+                    self.$emit('update', this.list());
                 }
             }
         };
