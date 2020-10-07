@@ -156,6 +156,9 @@ export default {
                 },
                 updateTree: function() {
                     self.$emit('update', this.list());
+                },
+                scroll: function() {
+                    self.$emit('scroll');
                 }
             }
         };
