@@ -58,7 +58,7 @@ export default {
             }
 
             $icon.attr(this.$options._scopeId, true);
-            $icon.css({ "position": "static", "float": "right", "margin-left": "-20px" });
+            $icon.css({ "position": "static", "float": "right", "margin-left": "-20px", "margin-top": "2px" });
 
             $(column.element).find("i").remove();
             $(column.element).append($icon)
@@ -75,7 +75,7 @@ export default {
 
             if($icon != null) {
                 $icon.attr(this.$options._scopeId, true);
-                $icon.css({ "position": "static", "float": "right", "margin-left": "-20px" });
+                $icon.css({ "position": "static", "float": "right", "margin-left": "-20px", "margin-top": "2px" });
 
                 $(column.element).append($icon);
             }
