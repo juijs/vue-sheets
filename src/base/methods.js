@@ -52,9 +52,9 @@ export default {
         setSortEffect: function(column) {
             $(column.element).parent().find("i").remove();
 
-            let $icon = $("<i class='icon-arrow3'></i>");
+            let $icon = $("<i class='icon-asc'></i>");
             if(column.order == "desc") {
-                $icon = $("<i class='icon-arrow1'></i>");
+                $icon = $("<i class='icon-desc'></i>");
             }
 
             $icon.attr(this.$options._scopeId, true);
@@ -68,9 +68,9 @@ export default {
 
             let $icon = null;
             if(column.order == "desc") {
-                $icon = $("<i class='icon-arrow1'></i>");
+                $icon = $("<i class='icon-desc'></i>");
             } else if(column.order == "asc") {
-                $icon = $("<i class='icon-arrow3'></i>");
+                $icon = $("<i class='icon-asc'></i>");
             }
 
             if($icon != null) {

@@ -15,7 +15,7 @@ window.vm = new Vue({
         activeIndex: 0,
         columns: [
             { key: null, name: "", width: "30px" },
-            { key: "name", name: "이름", width: "200px" },
+            { key: "name", name: "이름", width: "200px", sort: true },
             { key: "age", name: "나이", edit: true, active: true },
             { key: "location", name: "지역", active: false },
         ],
