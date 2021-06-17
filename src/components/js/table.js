@@ -105,6 +105,11 @@ export default {
         if(this.data != null) {
             this.sheet.update(this.data);
             this.$emit('update', this.sheet.list());
+
+            // 로우 선택 효과 주기
+            if(this.selectRowIndex !== -1) {
+                this.sheet.select(this.selectRowIndex);
+            }
         }
     }
 }
