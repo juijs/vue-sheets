@@ -60,7 +60,7 @@ export default {
             default: false
         },
         selectRowIndex: {
-            type: Number | String,
+            type: [ Number, String ],
             required: false,
             default: -1
         },

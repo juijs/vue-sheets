@@ -43,7 +43,7 @@ export default {
             default: 100
         },
         scrollRowIndex: {
-            type: Number | String,
+            type: [ Number, String ],
             required: false,
             default: -1
         },
