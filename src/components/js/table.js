@@ -43,6 +43,7 @@ export default {
                     if(!e) return;
                     if(self.selectRowEffect) this.select(obj.index);
                     self.$emit('click', obj, e);
+                    self.$emit('select', obj, e);
                 },
                 rowmenu: function(obj, e) {
                     if(!e) return;
